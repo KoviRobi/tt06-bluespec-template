@@ -13,9 +13,18 @@ jobs:
         with:
           submodules: recursive
 
+      - uses: cachix/install-nix-action@v25
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+      - run: >
+          nix run
+          'nixpkgs#yosys' --
+          -m $(nix build --print-out-paths --no-link nixpkgs#yosys-bluespec)/share/yosys/plugins/bluespec.so
+          -p "read_bluespec -top tt_um_kovirobi_bsv_test bsv/tt_um_kovirobi_bsv_test.bsv; prep; write_verilog src/tt_um_kovirobi_bsv_test.v"
+
       - name: Build GDS
         uses: TinyTapeout/tt-gds-action@tt06
-  
+
   precheck:
     needs: gds
     runs-on: ubuntu-latest

@@ -1,0 +1,24 @@
+{
+    "DESIGN_NAME": "tt_um_kovirobi_bsv_test",
+    "VERILOG_FILES": "dir::src/tt_um_kovirobi_bsv_test.v",
+    "CLOCK_PERIOD": 20,
+    "CLOCK_PORT": "clk",
+    "RUN_KLAYOUT_XOR": 0,
+    "RUN_KLAYOUT_DRC": 0,
+    "DESIGN_REPAIR_BUFFER_OUTPUT_PORTS": false,
+    "FP_SIZING": "absolute",
+
+    "PL_TARGET_DENSITY_PCT": 60,
+    "RUN_LINTER": 1,
+    "LINTER_INCLUDE_PDK_MODELS": 1,
+    "TOP_MARGIN_MULT": 1,
+    "BOTTOM_MARGIN_MULT": 1,
+    "LEFT_MARGIN_MULT": 6,
+    "RIGHT_MARGIN_MULT": 6,
+
+    "pdk::sky130*": {
+        "RT_MAX_LAYER": "met4",
+        "DIE_AREA": "0.0 0.0 161.0 111.52",
+        "FP_DEF_TEMPLATE": "dir::tt_block_1x1_pg.def"
+    }
+}

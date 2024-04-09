@@ -1,8 +1,15 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg)
 
+# 🚧 WORK IN PROGRESS 🚧
+
 # Tiny Tapeout Verilog Project Template
 
 - [Read the documentation for project](docs/info.md)
+
+This is currently just a very simple example under
+[bsv/tt_um_kovirobi_bsv_test.bsv](bsv/tt_um_kovirobi_bsv_test.bsv), just
+instantiating a FIFO, which at 8 bits wide and 20 entries deep takes up most of
+the area already.
 
 ## What is Tiny Tapeout?
 
